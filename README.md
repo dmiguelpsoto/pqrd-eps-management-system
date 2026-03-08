@@ -14,7 +14,7 @@ Sistema web para la gestión de PQRD (Peticiones, Quejas, Reclamos, Denuncias y 
 - Clasificación automática mediante IA (próximamente)
 - Alertas por vencimiento y reportes (próximamente)
 
-## Estructura del backend (modo aprendizaje)
+## Estructura del backend ()
 
 ```
 backend/
@@ -115,5 +115,4 @@ sqlite3 pqrd.db < schema.sql
 - **IA:** Procesamiento de lenguaje natural para clasificación de motivos (próximo módulo)
 
 ## Estado del proyecto
-
 En desarrollo como proyecto de portafolio profesional. Los módulos de administrador, informes, alertas por vencimiento e IA se irán añadiendo paso a paso.
