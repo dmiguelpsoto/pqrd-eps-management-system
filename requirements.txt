@@ -1,0 +1,11 @@
+# Sistema PQRD EPS - Backend
+# Python 3.10+
+
+fastapi==0.109.2
+uvicorn[standard]==0.27.1
+sqlalchemy==2.0.25
+pydantic==2.6.1
+pydantic-settings==2.1.0
+
+# Opcional para desarrollo
+python-multipart==0.0.9

@@ -1,0 +1,238 @@
+/* Variables y base */
+:root {
+  --color-primary: #0d47a1;
+  --color-primary-light: #1565c0;
+  --color-surface: #f5f5f5;
+  --color-card: #ffffff;
+  --color-text: #212121;
+  --color-text-muted: #616161;
+  --color-border: #e0e0e0;
+  --color-success: #2e7d32;
+  --color-warning: #ed6c02;
+  --color-error: #c62828;
+  --radius: 8px;
+  --shadow: 0 1px 3px rgba(0,0,0,0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background: var(--color-surface);
+  color: var(--color-text);
+  line-height: 1.5;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Layout */
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.layout-header {
+  background: var(--color-primary);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  box-shadow: var(--shadow);
+}
+
+.layout-header h1 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.layout-nav {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.layout-nav a {
+  color: rgba(255,255,255,0.9);
+  font-size: 0.9rem;
+}
+
+.layout-nav a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.layout-main {
+  flex: 1;
+  padding: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Cards y listas */
+.card {
+  background: var(--color-card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.card h2 {
+  margin-top: 0;
+  font-size: 1.1rem;
+  color: var(--color-text);
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 0.6rem 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid var(--color-border);
+}
+
+th {
+  background: var(--color-surface);
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+tr:hover td {
+  background: rgba(0,0,0,0.02);
+}
+
+/* Botones */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: var(--color-primary-light);
+}
+
+.btn-secondary {
+  background: var(--color-surface);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+}
+
+.btn-secondary:hover {
+  background: var(--color-border);
+}
+
+.btn-success {
+  background: var(--color-success);
+  color: white;
+}
+
+.btn-danger {
+  background: var(--color-error);
+  color: white;
+}
+
+/* Formularios */
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  font-size: 1rem;
+}
+
+.form-group textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px rgba(13, 71, 161, 0.2);
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.checkbox-group input[type="checkbox"] {
+  width: auto;
+}
+
+/* Estados y badges */
+.badge {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.badge-primary { background: #e3f2fd; color: #0d47a1; }
+.badge-abierta { background: #e3f2fd; color: #1565c0; }
+.badge-tramite { background: #fff3e0; color: #e65100; }
+.badge-cerrada { background: #e8f5e9; color: #2e7d32; }
+.badge-reabierta { background: #fce4ec; color: #c2185b; }
+
+/* Utilidades */
+.text-muted { color: var(--color-text-muted); font-size: 0.9rem; }
+.mt-1 { margin-top: 0.5rem; }
+.mt-2 { margin-top: 1rem; }
+.mb-2 { margin-bottom: 1rem; }
+.alert {
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius);
+  margin-bottom: 1rem;
+}
+.alert-error { background: #ffebee; color: var(--color-error); }
+.alert-success { background: #e8f5e9; color: var(--color-success); }
